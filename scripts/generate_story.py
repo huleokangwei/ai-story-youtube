@@ -3,7 +3,7 @@ import requests
 
 HF_TOKEN = os.environ.get("HF_TOKEN")
 
-API_URL = "https://api-inference.huggingface.co/models/Qwen/Qwen2.5-7B-Instruct"
+API_URL = "https://router.huggingface.co/hf-inference/models/Qwen/Qwen2.5-7B-Instruct"
 HEADERS = {
     "Authorization": f"Bearer {HF_TOKEN}"
 }
