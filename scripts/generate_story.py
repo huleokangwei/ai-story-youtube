@@ -37,12 +37,14 @@ payload = {
 }
 
 response = requests.post(API_URL, headers=HEADERS, json=payload)
-result = response.json()
+data = response.json()
 
-if isinstance(result, list):
-    story = result[0]["generated_text"]
+if isinstance(data, list) and "generated_text" in data[0]:
+    story = data[0]["generated_text"]
+elif isinstance(data, dict) and "generated_text" in data:
+    story = data["generated_text"]
 else:
-    story = str(result)
+    story = str(data)
 
 save_story(story)
 print("Storia generata con successo.")
