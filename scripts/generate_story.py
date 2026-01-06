@@ -4,7 +4,7 @@ import time
 
 HF_TOKEN = os.environ.get("HF_TOKEN")
 
-API_URL = "https://router.huggingface.co/hf-inference/models/google/flan-t5-small"
+API_URL = "https://router.huggingface.co/hf-inference/models/Qwen/Qwen2.5-7B-Instruct"
 HEADERS = {
     "Authorization": f"Bearer {HF_TOKEN}",
     "Content-Type": "application/json"
