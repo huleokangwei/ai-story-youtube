@@ -46,7 +46,7 @@ Nuovo episodio:
 """
 
 response = client.chat.complete(
-    model="mistral-small-latest",  # Modello consigliato per il tier gratuito
+    model="mistral-small-latest",
     messages=[{"role": "user", "content": prompt}],
     temperature=0.9,
     max_tokens=800
